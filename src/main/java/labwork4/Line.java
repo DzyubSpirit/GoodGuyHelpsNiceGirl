@@ -1,5 +1,7 @@
 package labwork4;
 
+import java.util.ArrayList;
+
 public class Line {
 	public char[] line = new char[8];
 	public Line(){
@@ -13,15 +15,22 @@ public class Line {
 		System.out.print("Change opacity to: " + op);
 	}
 	
-	public void showHorizontal(){
+	public ArrayList<String> showHorizontal(){
+		ArrayList<String> res = new ArrayList<>();
+		StringBuilder str = new StringBuilder();
 		for(int i = 0; i < line.length; i++){
-			System.out.print(line[i] + " ");
+			str.append(line[i]);
+			str.append(' ');
 		}
+		res.add(str.toString());
+		return res;
 	}
-	public void showVertical(){
+	public ArrayList<String> showVertical(){
+		ArrayList<String> res = new ArrayList<>();
 		for(int i = 0; i < line.length; i++){
-			System.out.println(line[i]);
+			res.add(Character.toString(line[i]));
 		}
-		System.out.println();
+		res.add("");
+		return res;
 	}
 }

@@ -1,2 +1,1 @@
-javac src/main/java/com/lab111/lab$1/* -d target/classes/
-java -cp target/classes com.lab111.lab$1.Main
+javac src/main/java/labwork4/* -d target/classes/ && java -cp target/classes labwork4.Main

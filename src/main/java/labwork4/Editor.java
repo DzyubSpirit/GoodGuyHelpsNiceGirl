@@ -16,14 +16,20 @@ public class Editor {
 	}
 	public void show(boolean vis){
 		this.visability = vis;
-		line[0].showHorizontal();
-		line[1].showVertical();
-		image.show();
-		line[2].showVertical();
-		line[3].showHorizontal();
+		showArrayList(line[0].showHorizontal());
+		showArrayList(line[1].showVertical());
+		showArrayList(image.show());
+		showArrayList(line[2].showVertical());
+		showArrayList(line[3].showHorizontal());
 		// add something for hide image
 	}
 	public void changeTypeOfFrame(){
 		
+	}
+
+	private static void showArrayList(ArrayList<String> lines) {
+		for (String line:lines) {
+			System.out.println(line);
+		}
 	}
 }
